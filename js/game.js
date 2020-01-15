@@ -38,7 +38,7 @@ var firstWheelRadius = 230; //first wheel radius for slot color feature
 var secondWheelRadius = 100; //second wheel radius for slot color feature
 
 //wheel segments
-var wheel_arr = [{src:'assets/item_wheel_01.png', highlight:'assets/item_wheel_01_h.png', color:'#FDCC09', regX:1, regY:223, point:10, type:0, percent:30,
+var wheel_arr = [{src:'assets/item_wheel_04.png', highlight:'assets/item_wheel_04_h.png', color:'#FDCC09', regX:1, regY:223, point:80, type:0, percent:30,
 					slot:{
 							color:'#FDCC09',
 							highlightColor:'#FFE600',
