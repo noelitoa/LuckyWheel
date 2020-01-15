@@ -17,7 +17,7 @@ var touchSpin = true; //touch to spin (true/false)
 //status display text
 var statusText_arr = ['SPIN YOUR FOTUNE','SPINNING...','[NUMBER]PTS', 'WIN [NUMBER]PTS', 'BETTER LUCK NEXT TIME!', 'JACKPOT [NUMBER]','YOU LOSS ALL POINTS'];
 var defaultStatusBgColor = '#655643'; //status bacgkround color
-var creditText = '[NUMBER]PTS'; //point display text
+var creditText = '[NUMBER]PHP'; //point display text
 
 //game play type; true for game1, false for game2
 var gamePlayType = true;
@@ -50,14 +50,14 @@ var wheel_arr = [{src:'assets/item_wheel_01.png', highlight:'assets/item_wheel_0
 							textColor:'#fff'
 						}
 				},
-				{src:'assets/item_wheel_02.png', highlight:'assets/item_wheel_02_h.png', color:'#F37621', regX:1, regY:223, point:25, type:0, percent:25},
+				//{src:'assets/item_wheel_02.png', highlight:'assets/item_wheel_02_h.png', color:'#F37621', regX:1, regY:223, point:25, type:0, percent:25},
 				{src:'assets/item_wheel_03.png', highlight:'assets/item_wheel_03_h.png', color:'#7DB544', regX:1, regY:223, point:50, type:0, percent:20},
 				{src:'assets/item_wheel_04.png', highlight:'assets/item_wheel_04_h.png', color:'#1A9DD8', regX:1, regY:223, point:80, type:0, percent:15},
 				{src:'assets/item_wheel_05.png', highlight:'assets/item_wheel_05_h.png', color:'#3F559A', regX:1, regY:223, point:100, type:0, percent:15},
 				//{src:'assets/item_wheel_06.png', highlight:'assets/item_wheel_06_h.png', color:'#91328B', regX:1, regY:223, point:1000, type:0, percent:15},
 				{src:'assets/item_wheel_07.png', highlight:'assets/item_wheel_07_h.png', color:'#449BD4', regX:1, regY:223, point:250, type:0, percent:15},
 				{src:'assets/item_wheel_08.png', highlight:'assets/item_wheel_08_h.png', color:'#F37621', regX:1, regY:223, point:500, type:0, percent:15},
-				{src:'assets/item_wheel_09.png', highlight:'assets/item_wheel_09_h.png', color:'#FDCC09', regX:1, regY:223, point:25, type:0, percent:25},
+				//{src:'assets/item_wheel_09.png', highlight:'assets/item_wheel_09_h.png', color:'#FDCC09', regX:1, regY:223, point:25, type:0, percent:25},
 				{src:'assets/item_wheel_10.png', highlight:'assets/item_wheel_10_h.png', color:'#7DB544', regX:1, regY:223, point:0, type:0, percent:25},
 				//{src:'assets/item_wheel_11.png', highlight:'assets/item_wheel_11_h.png', color:'#DA2027', regX:1, regY:223, point:1000000000, type:2, percent:5},
 				{src:'assets/item_wheel_12.png', highlight:'assets/item_wheel_12_h.png', color:'#475C70', regX:1, regY:223, point:0, type:1, percent:5},
@@ -81,14 +81,14 @@ var wheelSecond_arr = [{src:'', highlight:'', regX:0, regY:100, mutiply:1, perce
 					{src:'assets/item_wheel_inner_02.png', highlight:'assets/item_wheel_inner_02_h.png', regX:0, regY:100, mutiply:2, percent:10},
 					{src:'assets/item_wheel_inner_05.png', highlight:'assets/item_wheel_inner_05_h.png', regX:0, regY:100, mutiply:1, percent:30}];
 
-var resultTitleText = 'GAME OVER'; //result title text
-var resultScoreText = '[NUMBER]PTS'; //result score text
+var resultTitleText = 'Congratulations!'; //result title text
+var resultScoreText = '[NUMBER]PHP Voucher'; //result score text
 
 var exitMessage = 'Are you sure\nyou want to quit?'; //go to main page message
 
 //Social share, [SCORE] will replace with game score
 var shareEnable = true; //toggle share
-var shareText = 'SHARE YOUR SCORE'; //social share message
+var shareText = ''; //social share message
 var shareTitle = 'Highscore on Lucky Wheels Game is [SCORE]PTS.';//social share score title
 var shareMessage = '[SCORE]PTS is mine new highscore on Lucky Wheels Game! Try it now!'; //social share score message
 
