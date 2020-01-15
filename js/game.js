@@ -15,7 +15,7 @@ var spinSpeed = 18; //wheel spinning speed
 var touchSpin = true; //touch to spin (true/false)
 
 //status display text
-var statusText_arr = ['SPIN YOUR FOTUNE','SPINNING...','[NUMBER]PTS', 'WIN [NUMBER]PTS', 'BETTER LUCK NEXT TIME!', 'JACKPOT [NUMBER]','YOU LOSS ALL POINTS'];
+var statusText_arr = ['RINGKE SPIN THE WHEEL','SPINNING...','[NUMBER]PHP', 'WIN [NUMBER]PHP', 'BETTER LUCK NEXT TIME!', 'JACKPOT [NUMBER]','YOU LOSS ALL PHP'];
 var defaultStatusBgColor = '#655643'; //status bacgkround color
 var creditText = '[NUMBER]PHP'; //point display text
 
@@ -56,7 +56,7 @@ var wheel_arr = [{src:'assets/item_wheel_01.png', highlight:'assets/item_wheel_0
 				{src:'assets/item_wheel_05.png', highlight:'assets/item_wheel_05_h.png', color:'#3F559A', regX:1, regY:223, point:100, type:0, percent:15},
 				//{src:'assets/item_wheel_06.png', highlight:'assets/item_wheel_06_h.png', color:'#91328B', regX:1, regY:223, point:1000, type:0, percent:15},
 				{src:'assets/item_wheel_07.png', highlight:'assets/item_wheel_07_h.png', color:'#449BD4', regX:1, regY:223, point:250, type:0, percent:15},
-				{src:'assets/item_wheel_08.png', highlight:'assets/item_wheel_08_h.png', color:'#F37621', regX:1, regY:223, point:500, type:0, percent:15},
+				{src:'assets/item_wheel_08.png', highlight:'assets/item_wheel_11_h.png', color:'#F37621', regX:1, regY:223, point:500, type:0, percent:15},
 				//{src:'assets/item_wheel_09.png', highlight:'assets/item_wheel_09_h.png', color:'#FDCC09', regX:1, regY:223, point:25, type:0, percent:25},
 				{src:'assets/item_wheel_10.png', highlight:'assets/item_wheel_10_h.png', color:'#7DB544', regX:1, regY:223, point:0, type:0, percent:25},
 				//{src:'assets/item_wheel_11.png', highlight:'assets/item_wheel_11_h.png', color:'#DA2027', regX:1, regY:223, point:1000000000, type:2, percent:5},
