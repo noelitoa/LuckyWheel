@@ -45,7 +45,7 @@ var wheel_arr = [{src:'assets/item_wheel_04.png', highlight:'assets/item_wheel_0
 							stroke:5,
 							strokeColor:'#fff',
 							fontSize:45,
-							text:'10',
+							text:'80',
 							textY:140,
 							textColor:'#fff'
 						}
