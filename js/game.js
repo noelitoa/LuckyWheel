@@ -8,7 +8,7 @@
  * 
  */
 var enableFixedResult = false; //option to have fixed result by API, enabling this will disable 2D physics engine
-var enablePercentage = false; //option to have result base on percentage, enabling this will disable 2D physics engine
+var enablePercentage = true; //option to have result base on percentage, enabling this will disable 2D physics engine
 
 var spinDirection = true; //true to spin right, false to spin left
 var spinSpeed = 18; //wheel spinning speed
