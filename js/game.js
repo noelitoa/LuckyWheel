@@ -77,8 +77,8 @@ var wheelSecond_arr = [{src:'', highlight:'', regX:0, regY:100, mutiply:1, perce
 						}},
 					{src:'assets/item_wheel_inner_03.png', highlight:'assets/item_wheel_inner_03_h.png', regX:0, regY:100, mutiply:2, percent:10},
 					{src:'assets/item_wheel_inner_01.png', highlight:'assets/item_wheel_inner_01_h.png', regX:0, regY:100, mutiply:1, percent:10},
-					{src:'assets/item_wheel_inner_04.png', highlight:'assets/item_wheel_inner_04_h.png', regX:0, regY:100, mutiply:0, percent:10},
-					{src:'assets/item_wheel_inner_02.png', highlight:'assets/item_wheel_inner_02_h.png', regX:0, regY:100, mutiply:2, percent:10},
+					{src:'assets/item_wheel_inner_04.png', highlight:'assets/item_wheel_inner_04_h.png', regX:0, regY:100, mutiply:0, percent:20},
+					{src:'assets/item_wheel_inner_02.png', highlight:'assets/item_wheel_inner_02_h.png', regX:0, regY:100, mutiply:2, percent:30},
 					{src:'assets/item_wheel_inner_05.png', highlight:'assets/item_wheel_inner_05_h.png', regX:0, regY:100, mutiply:1, percent:30}];
 
 var resultTitleText = 'Congratulations!'; //result title text
