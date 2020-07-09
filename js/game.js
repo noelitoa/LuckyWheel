@@ -14,18 +14,18 @@ var spinDirection = true; //true to spin right, false to spin left
 var spinSpeed = 18; //wheel spinning speed
 var touchSpin = true; //touch to spin (true/false)
 
-//status display text 
-var statusText_arr = ['SPIN YOUR FOTUNE','SPINNING...','[NUMBER]PTS', 'WIN [NUMBER]PTS', 'BETTER LUCK NEXT TIME!', 'JACKPOT [NUMBER]','YOU LOSS ALL POINTS'];
+//status display text
+var statusText_arr = ['#RINGKESPINTHEWHEEL','SPINNING...','[NUMBER]PHP', 'WIN [NUMBER]PHP', 'BETTER LUCK NEXT TIME!', 'JACKPOT [NUMBER]','YOU LOSS ALL PHP'];
 var defaultStatusBgColor = '#655643'; //status bacgkround color
-var creditText = '[NUMBER]PTS'; //point display text
+var creditText = '[NUMBER]PHP'; //point display text
 
 //game play type; true for game1, false for game2
 var gamePlayType = true;
 
 //game1 (spin using chances)
-var gameChance = 7; //total chances
+var gameChance = 1; //total chances
 var chancesText = 'x [NUMBER]'; //chances display text
-var instructionTxt1 = 'You have total 7 ticket chances,\nspin the wheel or tap on the spin button to begin.'; //instruction
+var instructionTxt1 = 'You have total 1 ticket chances,\nspin the wheel or tap on the spin button to begin.'; //instruction
 
 //game2 (spin using bet number)
 var gameBetPoint = 500; //total bet point
@@ -38,29 +38,28 @@ var firstWheelRadius = 230; //first wheel radius for slot color feature
 var secondWheelRadius = 100; //second wheel radius for slot color feature
 
 //wheel segments
-var wheel_arr = [{src:'assets/item_wheel_01.png', highlight:'assets/item_wheel_01_h.png', color:'#FDCC09', regX:1, regY:223, point:10, type:0, percent:30,
+var wheel_arr = [{src:'assets/item_wheel_04.png', highlight:'assets/item_wheel_04_h.png', color:'#FDCC09', regX:1, regY:223, point:80, type:0, percent:30,
 					slot:{
 							color:'#FDCC09',
 							highlightColor:'#FFE600',
 							stroke:5,
 							strokeColor:'#fff',
 							fontSize:45,
-							lineHeight:20,
-							text:'1\n0',
+							text:'80',
 							textY:140,
 							textColor:'#fff'
 						}
 				},
-				{src:'assets/item_wheel_02.png', highlight:'assets/item_wheel_02_h.png', color:'#F37621', regX:1, regY:223, point:25, type:0, percent:25},
-				{src:'assets/item_wheel_03.png', highlight:'assets/item_wheel_03_h.png', color:'#7DB544', regX:1, regY:223, point:50, type:0, percent:20},
+				{src:'assets/item_wheel_03.png', highlight:'assets/item_wheel_03_h.png', color:'#F37621', regX:1, regY:223, point:50, type:0, percent:25},
+				{src:'assets/item_wheel_05.png', highlight:'assets/item_wheel_05_h.png', color:'#7DB544', regX:1, regY:223, point:100, type:0, percent:20},
 				{src:'assets/item_wheel_04.png', highlight:'assets/item_wheel_04_h.png', color:'#1A9DD8', regX:1, regY:223, point:80, type:0, percent:15},
 				{src:'assets/item_wheel_05.png', highlight:'assets/item_wheel_05_h.png', color:'#3F559A', regX:1, regY:223, point:100, type:0, percent:15},
-				{src:'assets/item_wheel_06.png', highlight:'assets/item_wheel_06_h.png', color:'#91328B', regX:1, regY:223, point:1000, type:0, percent:15},
+				{src:'assets/item_wheel_04.png', highlight:'assets/item_wheel_04_h.png', color:'#91328B', regX:1, regY:223, point:80, type:0, percent:15},				
+				{src:'assets/item_wheel_08.png', highlight:'assets/item_wheel_08_h.png', color:'#F37621', regX:1, regY:223, point:500, type:2, percent:15},
 				{src:'assets/item_wheel_07.png', highlight:'assets/item_wheel_07_h.png', color:'#449BD4', regX:1, regY:223, point:250, type:0, percent:15},
-				{src:'assets/item_wheel_08.png', highlight:'assets/item_wheel_08_h.png', color:'#F37621', regX:1, regY:223, point:500, type:0, percent:15},
-				{src:'assets/item_wheel_09.png', highlight:'assets/item_wheel_09_h.png', color:'#FDCC09', regX:1, regY:223, point:25, type:0, percent:25},
+				{src:'assets/item_wheel_05.png', highlight:'assets/item_wheel_05_h.png', color:'#FDCC09', regX:1, regY:223, point:100, type:0, percent:25},
 				{src:'assets/item_wheel_10.png', highlight:'assets/item_wheel_10_h.png', color:'#7DB544', regX:1, regY:223, point:0, type:0, percent:25},
-				{src:'assets/item_wheel_11.png', highlight:'assets/item_wheel_11_h.png', color:'#DA2027', regX:1, regY:223, point:1000000000, type:2, percent:5},
+				{src:'assets/item_wheel_07.png', highlight:'assets/item_wheel_07_h.png', color:'#DA2027', regX:1, regY:223, point:250, type:0, percent:5},
 				{src:'assets/item_wheel_12.png', highlight:'assets/item_wheel_12_h.png', color:'#475C70', regX:1, regY:223, point:0, type:1, percent:5},
 				];
 
@@ -72,25 +71,24 @@ var wheelSecond_arr = [{src:'', highlight:'', regX:0, regY:100, mutiply:1, perce
 							stroke:8,
 							strokeColor:'#fff',
 							fontSize:35,
-							lineHeight:35,
 							text:'x1',
 							textY:60,
 							textColor:'#fff'
 						}},
 					{src:'assets/item_wheel_inner_03.png', highlight:'assets/item_wheel_inner_03_h.png', regX:0, regY:100, mutiply:2, percent:10},
 					{src:'assets/item_wheel_inner_01.png', highlight:'assets/item_wheel_inner_01_h.png', regX:0, regY:100, mutiply:1, percent:10},
-					{src:'assets/item_wheel_inner_04.png', highlight:'assets/item_wheel_inner_04_h.png', regX:0, regY:100, mutiply:0, percent:10},
-					{src:'assets/item_wheel_inner_02.png', highlight:'assets/item_wheel_inner_02_h.png', regX:0, regY:100, mutiply:2, percent:10},
-					{src:'assets/item_wheel_inner_05.png', highlight:'assets/item_wheel_inner_05_h.png', regX:0, regY:100, mutiply:1, percent:30}];
+					{src:'assets/item_wheel_inner_04.png', highlight:'assets/item_wheel_inner_04_h.png', regX:0, regY:100, mutiply:0, percent:20},
+					{src:'assets/item_wheel_inner_02.png', highlight:'assets/item_wheel_inner_02_h.png', regX:0, regY:100, mutiply:2, percent:30},
+					{src:'assets/item_wheel_inner_05.png', highlight:'assets/item_wheel_inner_05_h.png', regX:0, regY:100, mutiply:1, percent:10}];
 
-var resultTitleText = 'GAME OVER'; //result title text
-var resultScoreText = '[NUMBER]PTS'; //result score text
+var resultTitleText = 'Congratulations!'; //result title text
+var resultScoreText = '[NUMBER]PHP Voucher'; //result score text
 
 var exitMessage = 'Are you sure\nyou want to quit?'; //go to main page message
 
 //Social share, [SCORE] will replace with game score
-var shareEnable = true; //toggle share
-var shareText = 'SHARE YOUR SCORE'; //social share message
+var shareEnable = false; //toggle share
+var shareText = ''; //social share message
 var shareTitle = 'Highscore on Lucky Wheels Game is [SCORE]PTS.';//social share score title
 var shareMessage = '[SCORE]PTS is mine new highscore on Lucky Wheels Game! Try it now!'; //social share score message
 
@@ -108,7 +106,6 @@ var playerData = {chance:0, score:0, point:0, bet:0};
 var gameData = {spinning:false, stopped:true, rotateEaseNum:0, rotateInnerNum:0, wheelNum:0, wheelInnerNum:0, lightNum:16, ticketX:0, shape:'', touch:false, paused:true, spinDirection:true, spinSpeed:0, velocity:0, spindType:false, showStatus:false, fixedRotate:-1, fixedInnerRotate:-1};
 var betData = {interval:null, timer:0, timerMax:300, timerMin:10, betpoint:0, betNumber:0, betNumberPlus:0};
 var lightData = {side:true, num:0};
-var arrowData = {move:true, speed:0, rotatation:0, count:0};
 
 /*!
  * 
@@ -162,7 +159,7 @@ function buildGameButton(){
 	
 	buttonSpin.cursor = "pointer";
 	buttonSpin.addEventListener("click", function(evt) {
-		//getResult(1,0);
+		getResult(1,0);
 		startSpinWheel(true);
 	});
 	
@@ -577,29 +574,6 @@ function updateGame(){
 	
 	if(!gameData.physicsEngine){
 		wheelPinContainer.rotation = wheelOuterContainer.rotation;
-		
-		if(gameData.spinning && arrowData.move){
-			var wheelRadius = 360 / wheel_arr.length;
-			
-			if(Math.abs(wheelPinContainer.rotation) >= (arrowData.count * wheelRadius)){
-				playSound('soundArrow');
-				if(gameData.spinDirection){
-					itemArrow.rotation = -30;
-				}else{
-					itemArrow.rotation = 30;	
-				}
-				for(var n=0; n<10; n++){
-					arrowData.count++;
-					if((arrowData.count * wheelRadius) >= Math.abs(wheelPinContainer.rotation)){
-						n = 10;
-						
-					}
-				}
-			}
-
-			arrowData.speed = (arrowData.speed * 0.900000) + ((0 - itemArrow.rotation) / 50);
-			itemArrow.rotation = (itemArrow.rotation + arrowData.speed);	
-		}
 	}
 }
 
@@ -675,7 +649,7 @@ function drawWheel(){
 			if(wheel_arr[n].slot.text != ''){
 				$.wheel['slotText'+n] = new createjs.Text();
 				$.wheel['slotText'+n].font = wheel_arr[n].slot.fontSize+"px libel_suitregular";
-				$.wheel['slotText'+n].lineHeight = wheel_arr[n].slot.lineHeight;
+				$.wheel['slotText'+n].lineHeight = wheel_arr[n].slot.fontSize;
 				$.wheel['slotText'+n].color = wheel_arr[n].slot.textColor;
 				$.wheel['slotText'+n].textAlign = "center";
 				$.wheel['slotText'+n].textBaseline='alphabetic';
@@ -743,7 +717,7 @@ function drawWheel(){
 				if(wheelSecond_arr[n].slot.text != ''){
 					$.wheelInner['slotText'+n] = new createjs.Text();
 					$.wheelInner['slotText'+n].font = wheelSecond_arr[n].slot.fontSize+"px libel_suitregular";
-					$.wheelInner['slotText'+n].lineHeight = wheelSecond_arr[n].slot.lineHeight;
+					$.wheelInner['slotText'+n].lineHeight = wheelSecond_arr[n].slot.fontSize;
 					$.wheelInner['slotText'+n].color = wheelSecond_arr[n].slot.textColor;
 					$.wheelInner['slotText'+n].textAlign = "center";
 					$.wheelInner['slotText'+n].textBaseline='alphabetic';
@@ -862,12 +836,10 @@ function startSpinWheelBig(){
 	gameData.spindType = true;
 	gameData.spinning = true;
 	gameData.stopped = false;
-	arrowData.count = 0;
 	
 	wheelOuterContainer.rotation = 0;
 	var wheelRadius = 360 / wheel_arr.length;
 	var rotateNum = gameData.fixedRotate;
-	
 	if(rotateNum == -1){
 		if(enablePercentage){
 			rotateNum = getResultOnPercent();
@@ -1316,22 +1288,20 @@ function getResultOnPercent(){
 	for(var n=0; n<gameData.percentageArray.length; n++){
 		if(n == gameData.percentageArray.length-1){
 			if(currentPercent == -1){
-				currentPercent = gameData.percentageArray[n].percent;
+				resultArray.push(gameData.percentageArray[n].slot);
+			}else if(currentPercent == gameData.percentageArray[n].percent){
+				resultArray.push(gameData.percentageArray[n].slot);	
 			}
 		}else if(randomInt <= gameData.percentageArray[n].percent){
 			if(currentPercent == -1){
-				currentPercent = gameData.percentageArray[n].percent;
+				resultArray.push(gameData.percentageArray[n].slot);
+			}else if(currentPercent == gameData.percentageArray[n].percent){
+				resultArray.push(gameData.percentageArray[n].slot);	
 			}
 		}
 		
 		if(currentPercent == -1 && resultArray.length > 0){
 			currentPercent = gameData.percentageArray[n].percent;
-		}	
-	}
-	
-	for(var n=0; n<gameData.percentageArray.length; n++){
-		if(currentPercent == gameData.percentageArray[n].percent){
-			resultArray.push(gameData.percentageArray[n].slot);	
 		}
 	}
 	
@@ -1347,22 +1317,20 @@ function getResultOnPercentInner(){
 	for(var n=0; n<gameData.percentageInnerArray.length; n++){
 		if(n == gameData.percentageInnerArray.length-1){
 			if(currentPercent == -1){
-				currentPercent = gameData.percentageInnerArray[n].percent;
+				resultArray.push(gameData.percentageInnerArray[n].slot);
+			}else if(currentPercent == gameData.percentageInnerArray[n].percent){
+				resultArray.push(gameData.percentageInnerArray[n].slot);	
 			}
 		}else if(randomInt <= gameData.percentageInnerArray[n].percent){
 			if(currentPercent == -1){
-				currentPercent = gameData.percentageInnerArray[n].percent;
+				resultArray.push(gameData.percentageInnerArray[n].slot);
+			}else if(currentPercent == gameData.percentageInnerArray[n].percent){
+				resultArray.push(gameData.percentageInnerArray[n].slot);	
 			}
 		}
 		
 		if(currentPercent == -1 && resultArray.length > 0){
 			currentPercent = gameData.percentageInnerArray[n].percent;
-		}	
-	}
-	
-	for(var n=0; n<gameData.percentageInnerArray.length; n++){
-		if(currentPercent == gameData.percentageInnerArray[n].percent){
-			resultArray.push(gameData.percentageInnerArray[n].slot);	
 		}
 	}
 	
