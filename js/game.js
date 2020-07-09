@@ -14,7 +14,7 @@ var spinDirection = true; //true to spin right, false to spin left
 var spinSpeed = 18; //wheel spinning speed
 var touchSpin = true; //touch to spin (true/false)
 
-//status display text
+//status display text 
 var statusText_arr = ['SPIN YOUR FOTUNE','SPINNING...','[NUMBER]PTS', 'WIN [NUMBER]PTS', 'BETTER LUCK NEXT TIME!', 'JACKPOT [NUMBER]','YOU LOSS ALL POINTS'];
 var defaultStatusBgColor = '#655643'; //status bacgkround color
 var creditText = '[NUMBER]PTS'; //point display text
